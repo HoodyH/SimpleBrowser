@@ -1,0 +1,17 @@
+{
+  "name": "simple-browser",
+  "version": "0.0.0",
+  "main": "main.js",
+  "scripts": {
+    "electron:build": "tsc main.ts --resolveJsonModule ",
+    "electron:serve": "npm run electron:build && electron .",
+    "electron:bundle": "electron-builder build --windows",
+    "app:deploy": "npm run electron:build && npm run electron:bundle"
+  },
+  "private": true,
+  "devDependencies": {
+    "electron": "^30.0.6",
+    "electron-builder": "^24.13.3",
+    "typescript": "~5.4.5"
+  }
+}

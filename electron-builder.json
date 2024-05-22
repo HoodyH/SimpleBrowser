@@ -1,0 +1,30 @@
+{
+  "productName": "SimpleBrowser",
+  "directories": {
+    "output": "./release/"
+  },
+  "files": [
+    "**/*",
+    "!**/*.ts",
+    "!*.code-workspace",
+    "!LICENSE.md",
+    "!package.json",
+    "!package-lock.json",
+    "!hooks/",
+    "!tsconfig.json",
+    "!tslint.json",
+    "!node_modules"
+  ],
+  "win": {
+    "asar": true,
+    "asarUnpack": [
+      "src/config/prod.json"
+    ],
+    "extraResources": [],
+    "verifyUpdateCodeSignature": false,
+    "signAndEditExecutable": true,
+    "target": [
+      "dir"
+    ]
+  }
+}
